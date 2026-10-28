@@ -1,0 +1,59 @@
+/* 팀원2 전용 스타일 — 이 파일은 마음대로 바꿔도 다른 팀원 페이지에 영향이 없어요. */
+:root {
+  --theme-1: #7c3aed;
+  --theme-2: #ec4899;
+  --theme-bg: #faf5ff;
+}
+
+body { background: var(--theme-bg); }
+
+.profile {
+  padding: 64px 0 48px;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(135deg, var(--theme-1), var(--theme-2));
+}
+.profile-emoji { font-size: 72px; line-height: 1; }
+.profile-name { margin: 16px 0 0; opacity: 0.85; font-weight: 600; }
+.profile h1 {
+  margin: 4px 0 8px;
+  font-size: clamp(28px, 5vw, 44px);
+  letter-spacing: -0.03em;
+}
+.profile h1 span { text-decoration: underline; text-decoration-thickness: 4px; text-underline-offset: 6px; }
+.profile-intro { margin: 0; opacity: 0.9; }
+
+.content { padding: 40px 16px 80px; display: grid; gap: 20px; }
+
+.block {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  border-left: 6px solid var(--theme-1);
+}
+.block h2 { margin: 0 0 12px; font-size: 20px; color: var(--theme-1); }
+.block p { margin: 0; }
+
+.top-list { margin: 0; padding-left: 20px; }
+.top-list li::marker { color: var(--theme-2); font-weight: 800; }
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 12px;
+}
+.gallery .photo,
+.gallery img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.gallery .photo {
+  display: grid;
+  place-items: center;
+  background: var(--theme-bg);
+  color: var(--theme-1);
+  border: 2px dashed var(--theme-2);
+  font-weight: 600;
+}
